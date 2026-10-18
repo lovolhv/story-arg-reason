@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>思镜 · 寓言与思辨</title>
+<meta name="description" content="十二个关于思维谬误与人生哲理的互动寓言。你的每个选择，都将照见自己的思维。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪞</text></svg>">
+</head>
+<body>
+
+<!-- 背景层 -->
+<canvas id="particles"></canvas>
+<div class="aurora"></div>
+<div class="vignette"></div>
+
+<!-- 首页 -->
+<main id="home" class="page active">
+  <header class="hero">
+    <p class="hero-eyebrow">STORIES · ARGUMENTS · REASON</p>
+    <h1 class="hero-title">思&nbsp;镜</h1>
+    <p class="hero-sub">十二个互动寓言，十二面照见思维的镜子。<br>你的每一次选择，都是一次自我审视。</p>
+    <div class="hero-actions">
+      <button class="btn-primary" id="btn-start">进入故事</button>
+      <button class="btn-ghost" id="btn-music" aria-label="音乐开关">♪ 音乐：开</button>
+    </div>
+    <div class="scroll-hint"><span></span></div>
+  </header>
+
+  <section class="gallery" id="gallery">
+    <h2 class="section-title">选择一面镜子</h2>
+    <div class="cards" id="cards"><!-- JS 渲染故事卡片 --></div>
+  </section>
+
+  <footer class="footer">
+    <p>思镜 · 寓言与思辨 — 每一个道理，都值得亲身经历一次</p>
+  </footer>
+</main>
+
+<!-- 故事页 -->
+<section id="story" class="page">
+  <div class="story-top">
+    <button class="btn-back" id="btn-back">← 返回</button>
+    <div class="story-meta">
+      <span id="story-tag"></span>
+      <h2 id="story-title"></h2>
+    </div>
+    <div class="progress"><div class="progress-bar" id="progress"></div></div>
+  </div>
+
+  <div class="story-stage">
+    <div class="story-card">
+      <p class="story-text" id="story-text"></p>
+      <div class="choices" id="choices"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 结局页 -->
+<section id="ending" class="page">
+  <div class="ending-card">
+    <p class="ending-eyebrow" id="ending-tag"></p>
+    <h2 class="ending-title" id="ending-title"></h2>
+    <p class="ending-verdict" id="ending-verdict"></p>
+    <div class="ending-divider"><span>道 理</span></div>
+    <h3 class="ending-fallacy" id="ending-fallacy"></h3>
+    <p class="ending-lesson" id="ending-lesson"></p>
+    <p class="ending-life" id="ending-life"></p>
+    <div class="ending-actions">
+      <button class="btn-primary" id="btn-retry">再走一次</button>
+      <button class="btn-ghost" id="btn-home">回到镜廊</button>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/audio.js"></script>
+<script src="assets/js/stories.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
